@@ -2,9 +2,9 @@ package numer0n.service.impl;
 
 import static numer0n.constant.GameConfig.*;
 import static numer0n.constant.MessageConfig.*;
+import numer0n.factory.service.NumeronCommandHandlerFactory;
 import numer0n.factory.util.InputCommandFactory;
-import numer0n.factory.util.NumeronCommandHandlerFactory;
-import numer0n.service.NumeronCommandHandler;
+import numer0n.service.CommandHandler;
 import numer0n.service.NumeronManager;
 import numer0n.service.NumeronResult;
 import numer0n.util.InputCommand;
@@ -13,7 +13,7 @@ import numer0n.util.NumeronNumberGenerator;
 public class NumeronManagerImpl implements NumeronManager {
     private InputCommand inputCommand;
 
-    private NumeronCommandHandler commandHandler;
+    private CommandHandler commandHandler;
 
     private int remainingTurn;
 
@@ -117,7 +117,7 @@ public class NumeronManagerImpl implements NumeronManager {
                     return true;
                 }
 
-                System.out.println(result.getBite() + " BITE : " + result.getEat() + " EAT");
+                System.out.println(result.getEat() + " EAT : " + result.getBite() + " BITE");
 
                 this.next();
 

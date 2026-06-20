@@ -18,12 +18,12 @@ public class NumeronNumberGenerator {
         }
 
         Iterator<Integer> it = digits.iterator();
-        String randomNumber = "";
+        StringBuilder randomNumber = new StringBuilder();
 
         while (it.hasNext()) {
-            randomNumber += it.next();
+            randomNumber.append(it.next());
         }
 
-        return randomNumber;
+        return randomNumber.toString();
     }
 }

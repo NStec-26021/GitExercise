@@ -59,23 +59,23 @@ public class NumeronResultImpl implements NumeronResult {
 
         // 1桁目
         if (this.input.matches(this.answer.substring(0, 1) + "[0-9]{2}")) {
-            this.bite++;
-        } else if (this.input.substring(0, 1).matches("[" + this.answer + "]")) {
             this.eat++;
+        } else if (this.input.substring(0, 1).matches("[" + this.answer + "]")) {
+            this.bite++;
         }
 
         // 2桁目
         if (this.input.matches("[0-9]" + this.answer.substring(1, 2) + "[0-9]")) {
-            this.bite++;
-        } else if (this.input.substring(1, 2).matches("[" + this.answer + "]")) {
             this.eat++;
+        } else if (this.input.substring(1, 2).matches("[" + this.answer + "]")) {
+            this.bite++;
         }
 
         // 3桁目
         if (this.input.matches("[0-9]{2}" + this.answer.substring(2, 3))) {
-            this.bite++;
-        } else if (this.input.substring(2, 3).matches("[" + this.answer + "]")) {
             this.eat++;
+        } else if (this.input.substring(2, 3).matches("[" + this.answer + "]")) {
+            this.bite++;
         }
     }
 }

@@ -2,10 +2,10 @@ package numer0n.service.impl;
 
 import static numer0n.constant.GameConfig.*;
 import static numer0n.constant.MessageConfig.*;
+import numer0n.factory.service.GameCommandHandlerFactory;
 import numer0n.factory.service.NumeronManagerFactory;
-import numer0n.factory.util.GameCommandHandlerFactory;
 import numer0n.factory.util.InputCommandFactory;
-import numer0n.service.GameCommandHandler;
+import numer0n.service.CommandHandler;
 import numer0n.service.GameManager;
 import numer0n.service.NumeronManager;
 import numer0n.util.InputCommand;
@@ -13,7 +13,7 @@ import numer0n.util.InputCommand;
 public class GameManagerImpl implements GameManager {
     private InputCommand inputCommand;
 
-    private GameCommandHandler gameCommandHandler;
+    private CommandHandler gameCommandHandler;
 
     private NumeronManager numeronManager;
 
@@ -52,6 +52,9 @@ public class GameManagerImpl implements GameManager {
             case CONTINUE:
                 this.numeronManager.start();
                 return false;
+
+            case EXIT:
+                return true;
 
             default:
                 return true;

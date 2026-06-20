@@ -2,9 +2,9 @@ package numer0n.service.impl;
 
 import numer0n.constant.GameConfig;
 import numer0n.exception.KeyNotFoundException;
-import numer0n.service.GameCommandHandler;
+import numer0n.service.CommandHandler;
 
-public class GameCommandHandlerImpl implements GameCommandHandler {
+public class GameCommandHandlerImpl implements CommandHandler {
 
     public GameCommandHandlerImpl() {}
 
